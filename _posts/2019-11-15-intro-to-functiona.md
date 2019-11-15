@@ -17,9 +17,9 @@ This means that a developer cannot determine what effects a function call may ha
 
 Some researchers argue that the functional abstractions produce higher quality (and easier to reason about) code without sacrificing performance; however, others suggest that the conciseness of these abstractions can make programs more challenging to read. In the next few articles, we'll look into the following features. Feel free to skip there now if you would like.
 
-- Laziness
-- Statelessness
 - Higher order functions
+- Laziness and Infinite Data Structures
+- Representing Non-Determinism
 
 (I'll add links to the articles on this)
 
