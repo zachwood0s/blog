@@ -5,24 +5,33 @@ title: "Functional Programming"
 
 ## What is functional?
 
-Traditional imperative programming can be broken down into three major parts: state, sequential, and assignment (Zuhud, 2013). Essentially, a series of sequential state modifications are used to express the program. This style of programming can be seen in the core of most of our modern computers; however, some researchers argue that additional abstractions can be made to write more expressive programs. One issue they see with imperative programming is that “state changes during the execution of the code before returning the final value rises unintended side effects, especially in critical mission and real-time software's[sic]” (Khanfor, 2017). This means that a developer cannot determine what effects a function call may have just by looking at its function signature. One solution to this is to use a style of programming called functional programming. In a purely functional language, no existing state can be modified, only new results can be generated. Because of this restriction, developers can ensure that calling a function will not affect the overall state of the program; such a guarantee cannot be made for imperative programming. (Khanfor, 2017). On top of “statelessness”, functional programming provides a set of very useful features that are worth mentioning: lazy evaluation, infinite data structures, increased software reuse, and intuitive ways of expressing non-determinism (Fischer, 2011). It is worth noting, however, that underneath the functional abstractions, an imperative machine will provide the desired solution (Zuhud, 2013). 
+Traditional imperative programming can be broken down into three major parts: state, sequential, and assignment. Essentially, a series of sequential state modifications are used to express the program. This style of programming can be seen in the core of most of our modern computers; however, some researchers argue that additional abstractions can be made to write more expressive programs. 
+
+> State changes during the execution of the code before returning the final value rises unintended side effects, especially in critical mission and real-time software's[sic].
+>
+> -- <cite>Kanfor (full name)</cite>
+
+This means that a developer cannot determine what effects a function call may have just by looking at its function signature. One solution to this is to use a style of programming called functional programming. In a purely functional language, no existing state can be modified, only new results can be generated. Because of this restriction, developers can ensure that calling a function will not affect the overall state of the program; such a guarantee cannot be made for imperative programming. On top of “statelessness”, functional programming provides a set of very useful features that are worth mentioning: lazy evaluation, infinite data structures, increased software reuse, and intuitive ways of expressing non-determinism. It is worth noting, however, that underneath the functional abstractions, an imperative machine will provide the desired solution. 
 
 ## Why functional?
 
-Some researchers argue that the functional abstractions produce higher quality (and easier to reason about) code without sacrificing performance (Pankratius, 2012); however, others suggest that the conciseness of these abstractions can make programs more challenging to read (Lippart, 2010).
+Some researchers argue that the functional abstractions produce higher quality (and easier to reason about) code without sacrificing performance; however, others suggest that the conciseness of these abstractions can make programs more challenging to read. In the next few articles, we'll look into the following features. Feel free to skip there now if you would like.
 
 - Laziness
 - Statelessness
 - Higher order functions
-- Conciseness
+
+(I'll add links to the articles on this)
 
 ## Where functional excels
 
 ### Data Processing
 
-Functional languages are typically very good at data processing. They provide easy ways of filtering, aggregating, sorting and maninpulating lists and list-like structures. A lot of this comes from the fact that they support functions as a first class data type. Because functions can be passed around as data, a sort function can be generalized to accept a “ordering” function. Or you apply a function onto each element of a list, also known as the “map” function. 
+Functional languages are typically very good at data processing. They provide easy ways of filtering, aggregating, sorting and maninpulating lists and list-like structures. A lot of this comes from the fact that they support functions as a first class data type. Because of this, a function can be generalized to accept a function as an argument. These are called higher-order functions (we'll look into those later). A sort function can then be generalized to accept a “ordering” function. Or you could apply a function onto each element of a list, also known as the `map` function. 
 
 ## Examples
+
+These are just some examples that I plan on using throughout the blog posts. They'll go in the other posts where they're more specific I think. Maybe one or two will be used on this first article.
 
 ### Summing a List
 
