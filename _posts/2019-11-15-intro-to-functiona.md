@@ -182,13 +182,6 @@ private void MergeSort(int[] input, int left, int right)
 ```
 Talk about the examples here
 
+## What's Next?
 
-## What the other posts will be like
-
-### Post 2 (In-depth look into some functional features)
-Features to Cover:
-- Laziness
-- Higher order functions (code reuse)
-- Non-determinism
-
-### Post 3 (Maybe not needed, but could be a whole example using lots of the concepts)
+In the next view posts, we'll dive deeper into some of the features that functional languages have to offer. We'll start by exploring [higher order functions]({% link _posts/2019-11-16-higher-order-functions.md %})
