@@ -36,9 +36,9 @@ Before we jump into the more complex examples, I want to give one simpler exampl
 I think summing the elements in a list is a good way to start. In a traditional imperative language, we would probably keep some counter and then add each element in that list to the counter. 
 
 ```csharp
-int sum = 0;            // Create out counter
-foreach(var x in list){ // Loop through the list
-    sum += x            // Add to the counter
+int sum = 0;                // Create out counter
+foreach(var x in list){     // Loop through the list
+    sum += x                // Add to the counter
 }
 ```
 
@@ -53,19 +53,19 @@ sum [] = 0                 -- Empty list sums to 0
 sum (x:xs) = x + sum xs    -- Add current element to the sum of the rest
 ```
 
-*Note: the `(x:xs)` is taking a list and capturing the first element as `x` and the rest as `xs`.*
+> The sum is defined as the first element plus the sum of the rest
+> *Note: the `(x:xs)` is taking a list and capturing the first element as `x` and the rest as `xs`.*
 
 Notice how the C# version describes more ***how to*** sum a list, whereas, the functional style describe ***what*** the sum of a list is. The C# version states that we need a counter, we need to loop through every element in the list, and that we need to add those to the counter. It doesn't really describe what the sum is, only how to compute it. The functional on the other hand, says that the sum of a list is the first element in the list plus the sum of the rest of the elements. This describes what a sum is more than how to do it.
 
-### Quick Note
+### Note about C#
 
 It should be noted that C# does support functional concepts. For example, summing a list could be written like this in C#:
 
 ```csharp
 // Aggregate takes an initial accumulator and a function 
 // that takes the previous accumulator and the element on the list.
-// Our function takes the previous acc and adds it to the current element. Very similar to the Haskell example
-
+// Our function takes the previous acc and adds it to the current element. 
 sum = list.Aggregate(0, (acc, x) => acc + x);
 ```
 
