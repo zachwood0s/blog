@@ -9,7 +9,7 @@ Traditional imperative programming can be broken down into three major parts: st
 
 > State changes during the execution of the code before returning the final value rises unintended side effects, especially in critical mission and real-time software's[sic].
 >
-> -- <cite>Kanfor</cite>
+> -- <cite>A. Kanfor</cite>
 
 This means that a developer cannot determine what effects a function call may have just by looking at its function signature. One solution to this is to use a style of programming called functional programming. In a purely functional language, no existing state can be modified, only new results can be generated. Because of this restriction, developers can ensure that calling a function will not affect the overall state of the program; such a guarantee cannot be made for imperative programming. On top of “statelessness”, functional programming provides a set of very useful features that are worth mentioning: lazy evaluation, infinite data structures, increased software reuse, and intuitive ways of expressing non-determinism. It is worth noting, however, that underneath the functional abstractions, an imperative machine will provide the desired solution. 
 
