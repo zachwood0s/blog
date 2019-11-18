@@ -19,15 +19,15 @@ Some researchers argue that the functional abstractions produce higher quality (
 
 ### Data Processing
 
-Functional languages are typically very good at data processing. They provide easy ways of filtering, aggregating, sorting and maninpulating lists and list-like structures. A lot of this comes from the fact that they support functions as a first class data type. Because of this, a function can be generalized to accept a function as an argument. These are called higher-order functions (we'll look into those later). A sort function can then be generalized to accept a “ordering” function. Or you could apply a function onto each element of a list, also known as the `map` function. 
+Functional languages are typically very good at data processing. They provide easy ways of filtering, aggregating, sorting and manipulating lists and list-like structures. A lot of this comes from the fact that they support functions as a first-class data type. Because of this, a function can be generalized to accept a function as an argument. These are called higher-order functions (we'll look into those later). A sort function can then be generalized to accept an “ordering” function. Or you could apply a function onto each element of a list, also known as the `map` function. 
 
 ### Parallelism
 
-Because functions cannot produce side effects in a pure language, this makes them very good at dealing with parallelism. Functions can all be started in parellel while guaranteeing that they can't effect the overall state of the program. This eliminates a whole class of errors that are typically dealt with in parallel programming. Also, because of something called [referential transparency](https://softwareengineering.stackexchange.com/questions/254304/what-is-referential-transparency), it doesn't matter what order they are evaluated in. Meaning that every sub-expression can be evaluated in parallel.
+Because functions cannot produce side effects in a pure language, this makes them very good at dealing with parallelism. Functions can all be started in parallel while guaranteeing that they can't affect the overall state of the program. This eliminates a whole class of errors that are typically dealt with in parallel programming. Also, because of something called [referential transparency](https://softwareengineering.stackexchange.com/questions/254304/what-is-referential-transparency), it doesn't matter what order they are evaluated in. Meaning that every sub-expression can be evaluated in parallel.
 
 ### Expressivness
 
-Typically functional code is very concise. Programs typically describe "what to do" rather than "how to do". Because of this, a lot of the boilerplate code is lost and you're left with a more concise, more expressive result. This does make functional languages less beginner friendly, however. Functions may be only one line long but they'll have a lot of meaning packed into that one line. Imperative languages, on the other hand, might produce quite a bit longer code but will typically "spell out" what they are doing. We'll see examples of this in the later articles.
+Typically functional code is very concise. Programs typically describe "what to do" rather than "how to do". Because of this, a lot of the boilerplate code is lost and you're left with a more concise, more expressive result. This does make functional languages less beginner-friendly, however. Functions may be only one line long but they'll have a lot of meaning packed into that one line. Imperative languages, on the other hand, might produce quite a bit longer code but will typically "spell out" what they are doing. We'll see examples of this in the later articles.
 
 ## Quick Example
 
@@ -46,7 +46,7 @@ This is fairly straight forward and you can essentially read the code as words.
 
 > Start sum at 0 and for each element in the list, add that element to the sum
 
-In a Haskell, however, there is no such thing as a `for` loop. Instead we use recursion like so:
+In a Haskell, however, there is no such thing as a `for` loop. Instead, we use recursion like so:
 
 ```haskell
 sum [] = 0                 -- Empty list sums to 0
@@ -81,3 +81,12 @@ In the next view posts, we'll dive deeper into some of the features that functio
 - [Lazy Evaluation and Infinite Data Structures]({% link _posts/2019-11-16-laziness.md %})
 
 We'll start by exploring [higher order functions]({% link _posts/2019-11-16-higher-order-functions.md %})
+
+## References
+- Khanfor, A. and Yang, Y., "An Overview of Practical Impacts of Functional Programming," 2017 24th Asia-Pacific Software Engineering Conference Workshops (APSECW), Nanjing, 2017, pp. 50-54.
+- Lippert, E. (2010, May 14). Why hasn't functional programming taken over yet? Retrieved from [https://stackoverflow.com/questions/2835801/why-hasnt-functional-programming-taken-over-yet.]
+- Nanz, S., & Furia, C. A. (2015). A Comparative Study of Programming Languages in Rosetta Code. 2015 IEEE/ACM 37th IEEE International Conference on Software Engineering. doi: 10.1109/icse.2015.90 
+- Ray, B., Posnett, D., Filkov, V., & Devanbu, P. (2014). A large scale study of programming languages and code quality in github. Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering - FSE 2014. doi: 10.1145/2635868.2635922 
+
+
+
