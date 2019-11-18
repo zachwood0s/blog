@@ -58,7 +58,7 @@ In the functional approach, we're describing what the result should be.
 > Our result should be our original list with every element multiplied by two.
 The distinction is subtle but it's an important one to make when looking at imperative style vs. functional (declarative) style.
 
-## Other Useful Higher-Order Functions
+## Other Common Higher-Order Functions
 
 ### filter
 
@@ -72,5 +72,22 @@ Here we're keeping only the elements that are greater than 10
 
 ### foldl / foldr
 
+Both of the fold functions take a list of elements and "fold" them into one result. Foldl is "fold from the left" whereas foldr is "fold from the right". This is done taking in a function that accepts an accumulator and the current element in the list. The sum example that we saw in the previous article can be written using these functions.
 
-For further reading on higher-order functions, I highly recommend reading [this](http://learnyouahaskell.com/higher-order-functions) chapter in "Learn You A Haskell".
+```haskell
+sum xs = foldl (+) 0 xs
+```
+
+To see the distinction between `foldl` and `foldr` its useful to look at an example. If we fold a list using subtraction, we'll get different results depending on which direction we go. 
+
+```haskell 
+foldr (-) 0 [1, 2, 3, 4]
+-- (1 - (2 - (3 - (4 - 0)))) = -2
+
+foldl (-) 0 [1, 2, 3, 4]
+-- ((((0 - 1) - 2) - 3) - 4) = -10
+```
+
+## Conclusion
+
+Higher-order functions allow you to generalize a function so that it can work in various different scenarios. This allows you to avoid writing the same boiler plate code over and over again and instead allows you to focus on the logic that matters. There are many other higher-order functions that I haven't covered here but these are the most common ones. If you're interested in a more in depth look at higher-order functions, I highly recommend reading [this chapter](http://learnyouahaskell.com/higher-order-functions) in "Learn You A Haskell".
