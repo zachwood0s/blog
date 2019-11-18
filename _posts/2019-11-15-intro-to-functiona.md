@@ -54,6 +54,7 @@ sum (x:xs) = x + sum xs    -- Add current element to the sum of the rest
 ```
 
 > The sum is defined as the first element plus the sum of the rest
+>
 > *Note: the `(x:xs)` is taking a list and capturing the first element as `x` and the rest as `xs`.*
 
 Notice how the C# version describes more ***how to*** sum a list, whereas, the functional style describe ***what*** the sum of a list is. The C# version states that we need a counter, we need to loop through every element in the list, and that we need to add those to the counter. It doesn't really describe what the sum is, only how to compute it. The functional on the other hand, says that the sum of a list is the first element in the list plus the sum of the rest of the elements. This describes what a sum is more than how to do it.
