@@ -94,4 +94,6 @@ foldl (-) 0 [1, 2, 3, 4]
 
 ## Conclusion
 
-Higher-order functions allow you to generalize a function so that it can work in various different scenarios. This allows you to avoid writing the same boiler plate code over and over again and instead allows you to focus on the logic that matters. There are many other higher-order functions that I haven't covered here but these are the most common ones. If you're interested in a more in depth look at higher-order functions, I highly recommend reading [this chapter](http://learnyouahaskell.com/higher-order-functions) in "Learn You A Haskell".
+Higher-order functions allow you to generalize a function so that it can work in various different scenarios. This allows you to avoid writing the same boiler plate code over and over again and instead allows you to focus on the logic that matters. There are many other higher-order functions that I haven't covered here but these are the most common ones. If you're interested in a more in depth look at higher-order functions, I highly recommend reading [this chapter](http://learnyouahaskell.com/higher-order-functions) in "Learn You A Haskell". 
+
+In the next article, we'll look into [lazy evaluation and infinite data structures]({% link _posts/2019-11-16-laziness.md %})
