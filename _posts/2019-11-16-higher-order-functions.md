@@ -15,7 +15,7 @@ A higher-order function is a function that takes a function as an input or retur
 
 ## map
 
-`map` is a function that applies one function to every element in a list, producing a new list. Say we had a list of numbers 1-10 and we wanted to multiple them each by two. `map` is the perfect function for doing this. 
+`map` is a function that applies one function to every element in a list, producing a new list. Say we had a list of numbers 1-4 and we wanted to multiple them each by two. `map` is the perfect function for doing this. 
 
 ```haskell
 by2 x = x * 2
@@ -53,9 +53,13 @@ foreach(var a in input)
 ```
 
 Notice how both of these solutions produce the same result, but the functional one is much more concise. In the imperative approach, we're once again describing how we want to produce the result.
+
 > Loop through the list, multiply by 2 and add it to the result.
+
 In the functional approach, we're describing what the result should be.
+
 > Our result should be our original list with every element multiplied by two.
+
 The distinction is subtle but it's an important one to make when looking at imperative style vs. functional (declarative) style.
 
 ## Other Common Higher-Order Functions
